@@ -3,18 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <title>Aula 04 - Mídias em HTML</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 10px;
+      }
+
+      header,
+      footer {
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #aaa;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+
+      .destaque {
+        background-color: #ffffcc;
+      }
+
+      .container {
+        background-color: #f5f5f5;
+        padding: 10px;
+        border-radius: 5px;
+        grid-column: 1 / 5;
+      }
+    </style>
   </head>
   <body>
-    <header></header>
+    <header>
+      <h1>Aula 04 - Mídias em HTML</h1>
+    </header>
+
     <main>
       <section>
         <h3>Imagens</h3>
-        <img
-          src="Imagens/Bug.jpg"
-          alt="Imagem 1"
-          width="120"
-          height="90"
-        /><br />
+        <img src="Imagens/Bug.jpg" alt="Imagem 1" width="120" /><br />
         <img
           src="Imagens/Gemini_Generated_Image_8q2pws8q2pws8q2p.png"
           alt="Imagem 2"
@@ -23,6 +58,7 @@
         <img
           src="Imagens/Gemini_Generated_Image_okkmsnokkmsnokkm.png"
           alt="Imagem 3"
+          width="120"
         />
       </section>
 
@@ -32,7 +68,6 @@
           src="Vídeo/Hailuo_Video_crie um prompt para ia onde va_421826314662645769 (1).mp4"
           controls
           width="250"
-          poster="Imagens/Gemini_Generated_Image_okkmsnokkmsnokkm.png"
         ></video>
       </section>
 
@@ -63,11 +98,15 @@
 
       <section>
         <h3>Links</h3>
-
         <a href="https://www.google.com">Google</a><br />
 
         <a href="https://www.google.com">
-          <img src="Imagens/social.png" alt="Google" /> </a
+          <img
+            src="Imagens/social.png"
+            alt="Google"
+            width="35"
+            height="35"
+          /> </a
         ><br />
 
         <a href="https://www.google.com" target="_blank"
@@ -77,13 +116,11 @@
 
       <section>
         <h3>Listas</h3>
-
         <ol>
           <li>Passo 1</li>
           <li>Passo 2</li>
           <li>Passo 3</li>
         </ol>
-
         <ul>
           <li>Item A</li>
           <li>Item B</li>
@@ -112,6 +149,11 @@
               <td>Dado 3</td>
               <td>Dado 4</td>
             </tr>
+            <tr>
+              <td>Linha 3</td>
+              <td>Dado 5</td>
+              <td>Dado 6</td>
+            </tr>
           </tbody>
         </table>
       </section>
@@ -122,7 +164,16 @@
         <p class="destaque">Parágrafo com classe "destaque".</p>
         <p class="destaque">Outro parágrafo com classe "destaque".</p>
       </section>
+
+      <section class="container">
+        <h3>Div Contêiner</h3>
+        <p>Parágrafo dentro do contêiner.</p>
+        <p>Outro parágrafo dentro do contêiner.</p>
+      </section>
     </main>
-    <footer></footer>
+
+    <footer>
+      <p>© 2025 – Exemplo didático de HTML da Aula 04</p>
+    </footer>
   </body>
 </html>
